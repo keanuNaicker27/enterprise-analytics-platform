@@ -1,0 +1,25 @@
+name: Multi-Cloud CI/CD
+on: [push]
+
+jobs:
+  terraform-and-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # Setup Terraform
+      - name: Terraform Setup
+        uses: hashicorp/setup-terraform@v2
+      - run: terraform fmt -check
+      
+      # Lint Python (Glue Jobs)
+      - name: Lint Python
+        run: |
+          pip install flake8
+          flake8 aws/glue/
+
+      # Validate SQL (BigQuery/Redshift/Synapse)
+      - name: SQL Lint
+        run: |
+          pip install sqlfluff
+          sqlfluff lint . --dialect postgres
