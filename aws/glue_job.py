@@ -9,17 +9,18 @@ spark = glueContext.spark_session
 # Load from S3
 input_df = spark.read.json("s3://enterprise-data-lake-raw/raw_events/")
 
-# Staff Level: Using Spark SQL for complex transformations
 input_df.createOrReplaceTempView("raw_events")
 
+# Flattening the nested JSON context in Spark
 transformed_df = spark.sql("""
     SELECT 
         event_id,
-        CAST(timestamp AS TIMESTAMP) as event_time,
+        timestamp as event_time,
         user_id,
-        UPPER(event_type) as event_name
+        event_type,
+        context.source as source_system,
+        context.ip as ip_address
     FROM raw_events
-    WHERE event_id IS NOT NULL
 """)
 
 # Write to Parquet (Optimized for Redshift Spectrum/BigQuery Omni)
