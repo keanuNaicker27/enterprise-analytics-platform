@@ -29,12 +29,12 @@ Detailed lineage showing data moving from raw ingestion to executive-level repor
 │       └── redshift_schema.sql  # Data warehouse definitions
 ├── 📁 gcp/                      # Advanced Analytics & ML
 │   └── 📁 bigquery/
-│       └── bigquery_omni.sql    # Zero-egress cross-cloud queries
+│       └── bigquery.sql    # Zero-egress cross-cloud queries
 ├── 📁 azure/                    # Enterprise Integration
 │   ├── 📁 pipelines/
 │   │   └── adf-pipeline.json    # Visual workflow definitions
 │   └── 📁 synapse/
-│       └── synapse_summary.sql  # Azure-native reporting logic
+│       └── synapse.sql  # Azure-native reporting logic
 ├── 📁 scripts/                  # Tooling & Utilities
 │   └── generate_data.py         # Synthetic 100-record JSON generator
 ├── 📁 datasets/                 # Sample Data
