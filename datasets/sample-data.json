@@ -1,0 +1,5 @@
+{"event_id": "e-101", "timestamp": "2023-10-27T10:01:05Z", "user_id": "u-882", "event_type": "page_view", "context": {"source": "web-front", "ip": "192.168.1.1", "browser": "Chrome"}}
+{"event_id": "e-102", "timestamp": "2023-10-27T10:05:22Z", "user_id": "u-441", "event_type": "login", "context": {"source": "ios-app", "ip": "172.16.0.44", "device": "iPhone 15"}}
+{"event_id": "e-103", "timestamp": "2023-10-27T10:12:00Z", "user_id": "u-882", "event_type": "add_to_cart", "context": {"source": "web-front", "ip": "192.168.1.1", "product_id": "p-55"}}
+{"event_id": "e-104", "timestamp": "2023-10-27T11:00:45Z", "user_id": "u-990", "event_type": "purchase", "context": {"source": "android-app", "ip": "10.0.0.15", "amount": 120.50}}
+{"event_id": "e-105", "timestamp": "2023-10-27T11:05:10Z", "user_id": "u-441", "event_type": "logout", "context": {"source": "ios-app", "ip": "172.16.0.44"}}
