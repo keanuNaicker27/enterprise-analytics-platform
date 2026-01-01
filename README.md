@@ -70,5 +70,6 @@ terraform init && terraform apply
 
 Upload aws/glue/glue_job.py to your AWS environment to process the generated sample-data.json.
 
-🧠 Design Philosophy
+**Design Philosophy**
+
 This project follows the ADR (Architecture Decision Record) pattern. For a deep dive into why specific clouds were chosen for specific workloads, cost-benefit analyses, and security trade-offs, see the Design Decisions document.
