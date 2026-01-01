@@ -1,0 +1,17 @@
+{
+    "name": "S3ToSynapseCopy",
+    "properties": {
+        "activities": [
+            {
+                "name": "CopyFromS3",
+                "type": "Copy",
+                "inputs": [ { "referenceName": "AmazonS3Dataset", "type": "DatasetReference" } ],
+                "outputs": [ { "referenceName": "AzureSynapseDataset", "type": "DatasetReference" } ],
+                "typeProperties": {
+                    "source": { "type": "BinarySource" },
+                    "sink": { "type": "SqlPoolSink" }
+                }
+            }
+        ]
+    }
+}
