@@ -5,10 +5,10 @@ This repository contains a production-grade, multi-cloud data ecosystem. As a St
 **Architecture Design**
 
 1. Platform Map (The Layout)
-A high-level view of our multi-cloud footprint, leveraging "Best of Breed" services from AWS, GCP, and Azure.
+   A high-level view of our multi-cloud footprint, leveraging "Best of Breed" services from AWS, GCP, and Azure.
 
 2. Data Lifecycle (The Journey)
-Detailed lineage showing data moving from raw ingestion to executive-level reporting.
+   Detailed lineage showing data moving from raw ingestion to executive-level reporting.
 
 **Project Structure**
 ```python
@@ -44,13 +44,17 @@ Detailed lineage showing data moving from raw ingestion to executive-level repor
 ```
     
 **Key Technical Feature**s
-1. Zero-Egress Analytics: Implementation of BigQuery Omni to query data residing in AWS S3 directly, eliminating costly cross-cloud data transfer fees.
+1. Zero-Egress Analytics:
+   Implementation of BigQuery Omni to query data residing in AWS S3 directly, eliminating costly cross-cloud data transfer fees.
 
-2. Infrastructure as Code (IaC): Automated provisioning of global resources using Terraform, ensuring environment parity across providers.
+2. Infrastructure as Code (IaC):
+   Automated provisioning of global resources using Terraform, ensuring environment parity across providers.
 
-3. DataOps & CI/CD: GitHub Actions pipeline that automates Python linting, SQL validation, and Terraform planning on every push.
+3. DataOps & CI/CD:
+   GitHub Actions pipeline that automates Python linting, SQL validation, and Terraform planning on every push.
 
-4. Identity Federation: Advanced security using Workload Identity Federation (OIDC) to allow cross-cloud communication without storing long-lived JSON keys.
+4. Identity Federation:
+   Advanced security using Workload Identity Federation (OIDC) to allow cross-cloud communication without storing long-lived JSON keys.
 
 **Quick Start**
 1. Generate Test Data:
